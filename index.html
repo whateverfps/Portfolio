@@ -194,8 +194,95 @@
       color: #eef4f8;
     }
 
+
+
+    .impact-grid,
+    .toolkit-grid,
+    .focus-grid,
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 1.75rem;
+    }
+
+    .impact-card,
+    .toolkit-card,
+    .focus-card,
+    .case-study-card {
+      padding: 24px;
+      border: 1px solid rgba(126, 162, 196, 0.18);
+      border-radius: 18px;
+      background: rgba(16, 36, 58, 0.72);
+    }
+
+    .impact-card strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      font-size: 1.7rem;
+      color: #7be5dc;
+    }
+
+    .impact-card span,
+    .toolkit-card p,
+    .focus-card p,
+    .case-study-card p {
+      color: #b6c5d5;
+      line-height: 1.6;
+    }
+
+    .toolkit-card h3,
+    .focus-card h3,
+    .case-study-card h3 {
+      margin: 0 0 0.65rem;
+    }
+
+    .tool-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.9rem;
+    }
+
+    .tool-list span {
+      padding: 0.42rem 0.7rem;
+      border: 1px solid rgba(158, 185, 211, 0.22);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      color: #d6e1eb;
+    }
+
+    .case-study-card .case-label {
+      margin: 0 0 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7be5dc;
+    }
+
+    .case-study-card dl {
+      margin: 1rem 0 0;
+    }
+
+    .case-study-card dt {
+      margin-top: 0.8rem;
+      font-weight: 800;
+      color: #eef4f8;
+    }
+
+    .case-study-card dd {
+      margin: 0.25rem 0 0;
+      color: #b6c5d5;
+      line-height: 1.55;
+    }
+
     @media (max-width: 900px) {
-      .showcase-grid {
+      .showcase-grid,
+      .impact-grid,
+      .toolkit-grid,
+      .focus-grid,
+      .case-study-grid {
         grid-template-columns: 1fr;
       }
 
@@ -232,6 +319,7 @@
 
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#work">Work</a>
+      <a href="#impact">Impact</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#about">About</a>
       <a class="nav-cta" href="#contact">Contact</a>
@@ -256,8 +344,8 @@
         </div>
 
         <div class="hero-proof">
-          <span>5 Substantial Solutions</span>
-          <span>Full-Stack + Browser Platforms</span>
+          <span>35+ Building Program</span>
+          <span>451-Page QA Manual</span>
           <span>Concept → Deployment</span>
         </div>
       </div>
@@ -302,9 +390,7 @@
             <p class="showcase-type">Construction Technology</p>
             <h3 class="showcase-title">Mission PMIS</h3>
             <p class="showcase-description">
-              An owner-side project intelligence platform for a federal healthcare modernization program,
-              combining building readiness, inspection data, risks, open questions, shutdowns, quality controls,
-              campus navigation, and executive reporting.
+              An owner-side project intelligence platform supporting oversight across 35+ campus buildings on a federal healthcare modernization program. It consolidates inspection data, readiness, risks, questions, shutdowns, quality controls, campus navigation, and executive reporting into one operational system.
             </p>
 
             <div class="showcase-tags">
@@ -409,8 +495,7 @@
             <p class="showcase-type">Knowledge Systems</p>
             <h3 class="showcase-title">Owner's Construction Quality Management Manual</h3>
             <p class="showcase-description">
-              A 451-page, project-specific engineering publication converting federal specifications into
-              40 operational QA sections, readiness procedures, field controls, and 12 standardized appendices.
+              A 451-page, project-specific engineering publication that transforms federal specifications into a usable owner-side quality system: 40 operational QA sections, readiness procedures, field controls, qualification guidance, and 12 standardized appendices.
             </p>
 
             <div class="showcase-tags">
@@ -423,6 +508,25 @@
             </div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="section-heading">
+        <p class="eyebrow">Operational Impact</p>
+        <h2>Work built for scale, accountability, and real-world use.</h2>
+        <p>
+          These systems were created to reduce fragmented information, clarify responsibility, and give operators and leadership a more reliable view of the work.
+        </p>
+      </div>
+
+      <div class="impact-grid">
+        <div class="impact-card"><strong>35+</strong><span>Campus buildings organized within a single owner-side PMIS and inspection framework.</span></div>
+        <div class="impact-card"><strong>451</strong><span>Pages of project-specific construction quality guidance developed from federal requirements.</span></div>
+        <div class="impact-card"><strong>40</strong><span>Operational QA sections supported by 12 standardized appendices and repeatable field controls.</span></div>
+        <div class="impact-card"><strong>5</strong><span>Substantial systems spanning construction, municipal operations, inspections, AI, and knowledge management.</span></div>
+        <div class="impact-card"><strong>20+</strong><span>Years of construction, field leadership, inspections, logistics, training, and operational problem-solving.</span></div>
+        <div class="impact-card"><strong>1</strong><span>Consistent goal: turn scattered information and unclear processes into usable operational systems.</span></div>
       </div>
     </section>
 
@@ -442,18 +546,56 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Tools &amp; Technologies</p>
+        <h2>A practical toolkit selected around the problem.</h2>
+      </div>
+
+      <div class="toolkit-grid">
+        <div class="toolkit-card">
+          <h3>Software &amp; Interfaces</h3>
+          <p>Building browser-based and desktop applications that are clear, stable, and usable by nontechnical operators.</p>
+          <div class="tool-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Electron</span></div>
+        </div>
+        <div class="toolkit-card">
+          <h3>Data &amp; Operations</h3>
+          <p>Structuring field data, project controls, records, workflows, reporting, and operational decision support.</p>
+          <div class="tool-list"><span>Excel</span><span>VBA</span><span>SQLite</span><span>Python</span><span>GIS</span><span>PMIS Design</span></div>
+        </div>
+        <div class="toolkit-card">
+          <h3>AI &amp; Knowledge Systems</h3>
+          <p>Connecting documents, rules, memory, retrieval, and structured workspaces to make complex information usable.</p>
+          <div class="tool-list"><span>OpenAI</span><span>RAG</span><span>Document Retrieval</span><span>Knowledge Architecture</span><span>Workflow Automation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Current Focus</p>
+        <h2>Where I am applying this work now.</h2>
+      </div>
+
+      <div class="focus-grid">
+        <div class="focus-card"><h3>Healthcare Construction QA/QC</h3><p>Owner-side readiness, inspection, safety, ICRA/PCRA, quality control, reporting, and preconstruction coordination.</p></div>
+        <div class="focus-card"><h3>Construction Technology</h3><p>PMIS platforms, field workflows, dashboards, building intelligence, document controls, and executive visibility.</p></div>
+        <div class="focus-card"><h3>Municipal Operations</h3><p>Inspection systems, permitting, code enforcement, rental housing, health and life-safety workflows, and public-facing tools.</p></div>
+        <div class="focus-card"><h3>AI-Assisted Knowledge Systems</h3><p>Desktop assistants and structured workspaces that connect documents, context, rules, data, and decision support.</p></div>
+        <div class="focus-card"><h3>Technical Publishing</h3><p>Turning specifications, standards, and institutional knowledge into usable manuals, procedures, checklists, and field references.</p></div>
+        <div class="focus-card"><h3>Consulting &amp; Dispute Support</h3><p>Applying field experience, documentation discipline, systems analysis, and conflict-resolution training to complex project issues.</p></div>
+      </div>
+    </section>
+
     <section class="section about-section" id="about">
       <div class="about-copy">
         <p class="eyebrow">About</p>
         <h2>Technology is only valuable when it solves the right problem.</h2>
         <p>
-          My background spans construction, inspections, project controls, municipal operations, Army leadership,
-          technical documentation, and software-enabled process improvement.
+          I bring together more than two decades of construction, trades, inspection, logistics, training, and leadership experience. My background includes Army NCO service, contractor and field operations, municipal building and health enforcement, owner-side construction quality oversight, technical publishing, and software-enabled process improvement.
         </p>
         <p>
-          I am strongest when the problem is undefined, information is scattered, and the answer requires more
-          than code alone. I bring the domain understanding, workflow design, communication, and implementation
-          discipline needed to build a useful solution.
+          That combination shapes how I build. I do not begin with technology; I begin with the operation, the people performing the work, the governing rules, and the decisions leadership must make. I am strongest when the problem is undefined, information is scattered, and the solution requires more than code alone.
         </p>
       </div>
 
@@ -461,6 +603,49 @@
         <div><span>Now</span><strong>Construction Quality Inspector</strong><p>Owner-side quality oversight and operational systems development for a federal healthcare modernization project.</p></div>
         <div><span>Prior</span><strong>Chief Building Inspector &amp; Health Officer</strong><p>Municipal enforcement, inspections, public safety, process development, and departmental operations.</p></div>
         <div><span>Foundation</span><strong>Construction + Army Leadership</strong><p>More than two decades of field, management, training, logistics, and problem-solving experience.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Operational Case Studies</p>
+        <h2>The problem, constraints, solution, and outcome.</h2>
+        <p>Each project began with a real operational gap and was shaped around the people, data, rules, and decisions involved.</p>
+      </div>
+
+      <div class="case-study-grid">
+        <article class="case-study-card">
+          <p class="case-label">Mission PMIS</p>
+          <h3>Turning scattered project information into owner-side intelligence</h3>
+          <dl>
+            <dt>Problem</dt><dd>Building assessments, risks, shutdowns, questions, and readiness information were distributed across separate records.</dd>
+            <dt>Constraints</dt><dd>Healthcare operations, multiple stakeholders, phased work, and the need to preserve Excel as the source of truth.</dd>
+            <dt>Solution</dt><dd>A connected Excel backend and application-style front end with campus, building, reporting, and executive views.</dd>
+            <dt>Outcome</dt><dd>A single operational framework for field review, leadership visibility, and project readiness across 35+ buildings.</dd>
+          </dl>
+        </article>
+
+        <article class="case-study-card">
+          <p class="case-label">City InspectorPro</p>
+          <h3>Consolidating municipal inspection and enforcement operations</h3>
+          <dl>
+            <dt>Problem</dt><dd>Permits, inspections, complaints, public guidance, SOPs, and code references were fragmented.</dd>
+            <dt>Constraints</dt><dd>Limited staff capacity, public accountability, varied workflows, and the need for accessible records.</dd>
+            <dt>Solution</dt><dd>A full-stack municipal portal combining internal operations, GIS, public resources, dashboards, and AI support.</dd>
+            <dt>Outcome</dt><dd>A unified model for managing municipal fieldwork, institutional knowledge, and public-facing service delivery.</dd>
+          </dl>
+        </article>
+
+        <article class="case-study-card">
+          <p class="case-label">QA Management Manual</p>
+          <h3>Converting federal specifications into field-operational guidance</h3>
+          <dl>
+            <dt>Problem</dt><dd>Critical quality requirements existed across lengthy specifications without a single owner-side operating reference.</dd>
+            <dt>Constraints</dt><dd>Federal healthcare standards, project-specific obligations, inspection rigor, and traceable documentation.</dd>
+            <dt>Solution</dt><dd>A 451-page technical publication with 40 operational sections, standardized procedures, and 12 appendices.</dd>
+            <dt>Outcome</dt><dd>A reusable framework for teaching the why, defining the how, and supporting consistent owner QA/QC execution.</dd>
+          </dl>
+        </article>
       </div>
     </section>
 
@@ -482,8 +667,7 @@
       <p class="eyebrow">Contact</p>
       <h2>Let's build better operational systems.</h2>
       <p>
-        I am interested in solutions engineering, technical product development, construction technology,
-        AI-enabled operations, civic technology, and digital-transformation work.
+        I am interested in solutions engineering, construction technology, owner-side QA/QC, municipal operations, AI-enabled knowledge systems, technical publishing, consulting, and dispute-support work.
       </p>
 
       <div class="contact-actions">
