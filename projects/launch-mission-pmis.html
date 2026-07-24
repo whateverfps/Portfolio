@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Launch Mission PMIS | Paul Thibodeau</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Launch Mission PMIS | Paul Thibodeau</title>
+<link href="../assets/styles.css" rel="stylesheet"/>
+<style>
     .launch-shell{min-height:calc(100vh - 76px);display:grid;place-items:center;padding:48px 0}
     .launch-card{width:min(760px,90vw);background:linear-gradient(145deg,rgba(19,40,62,.98),rgba(11,23,39,.98));border:1px solid var(--line);border-radius:24px;padding:38px;box-shadow:0 30px 80px rgba(0,0,0,.32)}
     .launch-status{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025);margin:24px 0}
@@ -19,18 +20,18 @@
 <body>
 <header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">PT</span><span><strong>Paul Thibodeau</strong><small>Solutions Engineer</small></span></a><nav class="site-nav"><a href="mission-pmis.html">Case Study</a><a href="../index.html#work">Portfolio</a></nav></header>
 <main class="launch-shell">
-  <section class="launch-card">
-    <p class="eyebrow">MISSION PMIS DEMONSTRATION</p>
-    <h2>Opening the live system with the Bedford v9.0 workbook.</h2>
-    <p class="hero-lead">Your browser will download the prepared Excel workbook and open Mission PMIS in a new tab.</p>
-    <div class="launch-status"><span class="step-dot">1</span><div><strong>Workbook prepared</strong><p><code>Bedford_VA_EHRM_PMIS_MASTER_v9.0.xlsx</code> will download automatically.</p></div></div>
-    <div class="launch-status"><span class="step-dot">2</span><div><strong>Mission PMIS opens</strong><p>Click <b>Load Excel Workbook</b> and choose the downloaded workbook. Browsers do not permit one website to silently populate another website's file-input control.</p></div></div>
-    <div class="launch-actions">
-      <button id="launchBtn" class="button primary" type="button">Download workbook & open PMIS ↗</button>
-      <a class="button secondary" href="../assets/data/Bedford_VA_EHRM_PMIS_MASTER_v9.0.xlsx" download>Download workbook only</a>
-    </div>
-    <p class="notice" id="launchMessage">The launch button performs both actions from one click. If the PMIS tab is blocked, allow pop-ups for this portfolio site.</p>
-  </section>
+<section class="launch-card">
+<p class="eyebrow">MISSION PMIS DEMONSTRATION</p>
+<h2>Opening the live system with the Bedford v9.0 workbook.</h2>
+<p class="hero-lead">Your browser will download the prepared Excel workbook and open Mission PMIS in a new tab.</p>
+<div class="launch-status"><span class="step-dot">1</span><div><strong>Workbook prepared</strong><p><code>Bedford_VA_EHRM_PMIS_MASTER_v9.0.xlsx</code> will download automatically.</p></div></div>
+<div class="launch-status"><span class="step-dot">2</span><div><strong>Mission PMIS opens</strong><p>Click <b>Load Excel Workbook</b> and choose the downloaded workbook. Browsers do not permit one website to silently populate another website's file-input control.</p></div></div>
+<div class="launch-actions">
+<button class="button primary" id="launchBtn" type="button">Download workbook &amp; open PMIS ↗</button>
+
+</div>
+<p class="notice" id="launchMessage">The launch button performs both actions from one click. If the PMIS tab is blocked, allow pop-ups for this portfolio site.</p>
+</section>
 </main>
 <script>
 const workbookUrl = '../assets/data/Bedford_VA_EHRM_PMIS_MASTER_v9.0.xlsx';

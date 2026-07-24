@@ -146,15 +146,13 @@
 }
 
 
-/* Executive expertise panel */
-.expertise-panel h2{font-size:clamp(2rem,3.1vw,3.15rem);margin-bottom:16px}
-.expertise-grid{margin-top:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.expertise-card{display:flex;align-items:flex-start;gap:13px;min-height:112px;padding:17px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));transition:transform .2s ease,border-color .2s ease,background .2s ease}
-.expertise-card:hover{transform:translateY(-2px);border-color:rgba(79,209,197,.38);background:rgba(79,209,197,.055)}
-.expertise-icon{flex:0 0 38px;width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(79,209,197,.3);border-radius:11px;background:rgba(79,209,197,.08);color:var(--accent2)}
-.expertise-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+/* Cumulative portfolio release: executive expertise profile */
+.expertise-grid{margin-top:24px;display:grid;grid-template-columns:1fr;gap:12px}
+.expertise-card{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}
+.expertise-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:rgba(79,209,197,.1);border:1px solid rgba(79,209,197,.22);color:var(--accent2);font-size:1.15rem;font-weight:850}
 .expertise-card strong,.expertise-card span{display:block}
-.expertise-card strong{font-size:1.08rem;line-height:1.2;margin-top:1px}
-.expertise-card div>span{color:var(--muted);font-size:.8rem;line-height:1.35;margin-top:5px}
-.expertise-footer{margin-top:18px;padding-top:17px;border-top:1px solid var(--line);color:#8fa5b9;font-size:.76rem;line-height:1.5;text-align:center;letter-spacing:.015em}
-@media(max-width:520px){.expertise-grid{grid-template-columns:1fr}.expertise-card{min-height:auto}}
+.expertise-card strong{font-size:1rem;line-height:1.2}
+.expertise-card div span{color:var(--muted);font-size:.82rem;margin-top:3px}
+.expertise-footer{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem;letter-spacing:.04em}
+.document-gallery img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}
+@media(max-width:860px){.expertise-grid{grid-template-columns:1fr}}
