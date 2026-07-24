@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Case study: Owner's Construction Quality Management Manual for the VA Bedford EHRM Infrastructure Upgrades project."
+  >
+  <title>Owner's Construction Quality Management Manual | Paul Thibodeau</title>
+
+  <link rel="stylesheet" href="../assets/styles.css">
+
+  <style>
+    .manual-project-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .manual-project-copy {
+      max-width: 860px;
+    }
+
+    .manual-project-hero h1 {
+      margin: 0.35rem 0 0.9rem;
+    }
+
+    .manual-project-hero .hero-lead {
+      max-width: 760px;
+    }
+
+    .manual-project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+
+    .manual-project-meta,
+    .manual-tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .manual-project-meta span,
+    .manual-tech-list span {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(120, 145, 175, 0.28);
+      border-radius: 999px;
+    }
+
+    .manual-cover-stage {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 520px;
+      padding: 2rem;
+      overflow: hidden;
+      border: 1px solid rgba(120, 145, 175, 0.2);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(88, 219, 206, 0.14), transparent 38%),
+        linear-gradient(145deg, #0d1b2a, #18324b);
+    }
+
+    .manual-cover-stage img {
+      display: block;
+      width: min(340px, 80%);
+      max-height: 470px;
+      object-fit: contain;
+      margin: 0;
+      border-radius: 5px;
+      box-shadow: 20px 24px 48px rgba(0, 0, 0, 0.34);
+    }
+
+    .manual-cover-stage span {
+      position: absolute;
+      left: 1.2rem;
+      right: 1.2rem;
+      bottom: 1rem;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .manual-impact-grid,
+    .manual-feature-grid,
+    .manual-skills-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .manual-impact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .manual-impact-card,
+    .manual-feature-card,
+    .manual-skill-card {
+      padding: 1.2rem;
+      border: 1px solid rgba(120, 145, 175, 0.2);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .manual-impact-card strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1.25rem;
+    }
+
+    .manual-feature-grid {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .manual-feature-card h3,
+    .manual-skill-card h3 {
+      margin-top: 0;
+    }
+
+    .manual-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .manual-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(120, 145, 175, 0.2);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .manual-gallery a {
+      display: block;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #0b1a2a;
+    }
+
+    .manual-gallery img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      object-fit: contain;
+      object-position: center top;
+      background: rgba(255, 255, 255, 0.02);
+      transition: transform 180ms ease;
+    }
+
+    .manual-gallery figure:hover img {
+      transform: scale(1.015);
+    }
+
+    .manual-gallery figcaption {
+      display: grid;
+      gap: 0.3rem;
+      padding: 1rem 1.1rem 1.2rem;
+    }
+
+    .manual-gallery figcaption span {
+      line-height: 1.5;
+      opacity: 0.78;
+    }
+
+    .manual-technology-band {
+      margin-top: 2rem;
+      padding: 1.6rem;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #0d1b2a, #18324b);
+      color: #fff;
+    }
+
+    .manual-technology-band h2 {
+      color: inherit;
+      margin-top: 0;
+    }
+
+    .manual-tech-list {
+      margin-top: 1rem;
+    }
+
+    .manual-tech-list span {
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .manual-skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .manual-closing {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-left: 4px solid currentColor;
+      border-radius: 14px;
+      background: rgba(120, 145, 175, 0.08);
+    }
+
+    .manual-closing p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .manual-project-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .manual-cover-stage {
+        min-height: 430px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .manual-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .manual-project-actions .button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">PT</span>
+      <span>
+        <strong>Paul Thibodeau</strong>
+        <small>Solutions Engineer</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section case-hero manual-project-hero">
+      <div class="manual-project-copy">
+        <a class="back-link" href="../index.html#work">← Back to selected work</a>
+
+        <p class="eyebrow">Knowledge Systems · Construction Quality</p>
+
+        <h1>Owner's Construction Quality Management Manual</h1>
+
+        <p class="hero-lead">
+          A 451-page, project-specific operational knowledge system created for the VA Bedford EHRM
+          Infrastructure Upgrades project. The publication converts a complex federal contract record into
+          structured owner-side quality procedures, field controls, readiness gates, acceptance criteria,
+          and standardized documentation.
+        </p>
+
+        <div class="manual-project-actions">
+          <a
+            class="button primary"
+            href="../assets/manual/Owner_QA_Manual_Portfolio_Preview.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Open portfolio preview ↗
+          </a>
+
+          <a class="button secondary" href="#gallery">View selected pages</a>
+        </div>
+
+        <div class="manual-project-meta" aria-label="Publication metrics">
+          <span>451 Pages</span>
+          <span>40 Sections</span>
+          <span>8 Parts</span>
+          <span>12 Appendices</span>
+          <span>38 Tables</span>
+        </div>
+      </div>
+
+      <div class="manual-cover-stage">
+        <img
+          src="../assets/manual/page-1.png"
+          alt="Cover of the Owner's Construction Quality Management Manual"
+        >
+        <span>Revision 1.0 · Draft for Internal Review</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Project Impact</p>
+      <h2>A complete field and management framework.</h2>
+
+      <div class="manual-impact-grid">
+        <article class="manual-impact-card">
+          <strong>451</strong>
+          <span>Rendered pages of project-specific guidance.</span>
+        </article>
+
+        <article class="manual-impact-card">
+          <strong>40</strong>
+          <span>Operational sections organized into eight parts.</span>
+        </article>
+
+        <article class="manual-impact-card">
+          <strong>12</strong>
+          <span>Standardized field appendices and acceptance tools.</span>
+        </article>
+
+        <article class="manual-impact-card">
+          <strong>30+</strong>
+          <span>Occupied medical-campus buildings within project scope.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section case-grid">
+      <aside class="case-sidebar">
+        <dl>
+          <dt>ROLE</dt>
+          <dd>Lead Author · Quality Systems Designer · Subject-Matter Integrator</dd>
+
+          <dt>PROJECT</dt>
+          <dd>VA Bedford EHRM Infrastructure Upgrades · Project 518-22-700</dd>
+
+          <dt>CHALLENGE</dt>
+          <dd>Turn a large multidisciplinary contract record into a usable owner-side operating framework.</dd>
+
+          <dt>OUTCOME</dt>
+          <dd>
+            A structured manual covering daily QA operations, technical divisions, readiness, turnover,
+            acceptance, and field documentation.
+          </dd>
+
+          <dt>DELIVERY</dt>
+          <dd>Microsoft Word · specification analysis · AI-assisted drafting · document architecture</dd>
+        </dl>
+      </aside>
+
+      <div class="case-content">
+        <section>
+          <p class="eyebrow">The Challenge</p>
+          <h2>Specifications define obligations. They do not automatically create an operating system.</h2>
+
+          <p>
+            The Bedford EHRM project spans more than thirty occupied medical-campus buildings and includes
+            telecommunications rooms, a main computer room, fiber backbone replacement, Category 6A cabling,
+            electrical and HVAC upgrades, plumbing, fire protection, fire alarm, CCTV, access control,
+            commissioning, OIT activation, and building-by-building acceptance.
+          </p>
+
+          <p>
+            The owner quality function therefore needed more than a collection of checklists. It required a
+            coherent framework showing how contract requirements, contractor quality control, field verification,
+            evidence, deficiency management, readiness decisions, and owner acceptance fit together.
+          </p>
+        </section>
+
+        <section>
+          <p class="eyebrow">The Solution</p>
+          <h2>A technical publication designed as an operational system.</h2>
+
+          <p>
+            The manual establishes mission, authority, decision hierarchy, daily workflow, definable features
+            of work, specification-based procedures, trade-specific acceptance criteria, communications,
+            reporting, deficiency control, building readiness, OIT activation, beneficial occupancy,
+            final acceptance, warranty support, and continuous improvement.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Publication Architecture</p>
+      <h2>Structured for navigation, repeatability, and evidence.</h2>
+
+      <div class="manual-feature-grid">
+        <article class="manual-feature-card">
+          <h3>Part I</h3>
+          <p>Project administration, authority, decision structure, and daily owner-QA foundations.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Parts II–V</h3>
+          <p>General requirements and specification-driven procedures across the technical divisions.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Part VI</h3>
+          <p>Owner-QA operations, records, reporting, communications, photography, and deficiency control.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Part VII</h3>
+          <p>Building readiness, OIT activation, turnover, beneficial occupancy, and final acceptance.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Part VIII</h3>
+          <p>Forms, checklists, matrices, data standards, acceptance tools, and field playbooks.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>PMIS Linkage</h3>
+          <p>Connects field verification, evidence, readiness, and deficiencies to project data and executive visibility.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Standardized Procedure Model</p>
+      <h2>Every section teaches the why before the how.</h2>
+
+      <div class="manual-feature-grid">
+        <article class="manual-feature-card">
+          <h3>Purpose &amp; Intent</h3>
+          <p>Explains why the requirement matters and how it fits within owner-side quality oversight.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Prerequisites</h3>
+          <p>Defines documents, approvals, submittals, conditions, and coordination needed before verification.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Verification Procedure</h3>
+          <p>Provides a repeatable field process for observing, testing, documenting, and evaluating the work.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Objective Evidence</h3>
+          <p>Identifies the records, photographs, reports, test results, and approvals needed to support acceptance.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Red Flags &amp; Risks</h3>
+          <p>Surfaces conditions that warrant escalation, added documentation, or withheld readiness.</p>
+        </article>
+
+        <article class="manual-feature-card">
+          <h3>Acceptance Criteria</h3>
+          <p>Connects field findings to clear readiness, turnover, and owner-acceptance decisions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Document Gallery</p>
+        <h2>From governance to field execution.</h2>
+        <p>
+          Selected pages demonstrate the manual's scale, hierarchy, technical content, and standardized field tools.
+        </p>
+      </div>
+
+      <div class="manual-gallery">
+        <figure>
+          <a href="../assets/manual/page-1.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-1.png" alt="Document control cover page">
+          </a>
+          <figcaption>
+            <strong>Document control</strong>
+            <span>Project identity, revision, status, and governing disclaimer.</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a href="../assets/manual/page-2.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-2.png" alt="Table of contents page">
+          </a>
+          <figcaption>
+            <strong>Structured contents</strong>
+            <span>Part, section, and subsection hierarchy across the publication.</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a href="../assets/manual/page-75.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-75.png" alt="Technical procedure page">
+          </a>
+          <figcaption>
+            <strong>Operational procedure</strong>
+            <span>Field-verification criteria and objective-evidence requirements.</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a href="../assets/manual/page-160.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-160.png" alt="Room verification page">
+          </a>
+          <figcaption>
+            <strong>Trade verification</strong>
+            <span>Detailed room and installation inspection checkpoints.</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a href="../assets/manual/page-280.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-280.png" alt="Access control systems section">
+          </a>
+          <figcaption>
+            <strong>Technical division</strong>
+            <span>Purpose and specification intent for access-control systems.</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a href="../assets/manual/page-437.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-437.png" alt="Appendix A daily report">
+          </a>
+          <figcaption>
+            <strong>Standardized field tools</strong>
+            <span>Daily owner-QA reporting and documentation framework.</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a href="../assets/manual/page-440.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-440.png" alt="Owner deficiency report">
+          </a>
+          <figcaption>
+            <strong>Deficiency control</strong>
+            <span>Formal documentation, follow-up, responsibility, and closure fields.</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <a href="../assets/manual/page-444.png" target="_blank" rel="noopener">
+            <img src="../assets/manual/page-444.png" alt="Readiness checklist page">
+          </a>
+          <figcaption>
+            <strong>Acceptance readiness</strong>
+            <span>Completion, documentation, PMIS, evidence, and recommendation gates.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="manual-technology-band">
+        <p class="eyebrow">Delivery &amp; Methods</p>
+        <h2>A publication created as a working quality system.</h2>
+
+        <p>
+          The project combined source-document analysis, document architecture, specification cross-referencing,
+          technical writing, field-procedure design, AI-assisted drafting, production formatting, and PMIS integration.
+        </p>
+
+        <div class="manual-tech-list">
+          <span>Microsoft Word</span>
+          <span>Federal Specifications</span>
+          <span>Document Architecture</span>
+          <span>Technical Publishing</span>
+          <span>QA/QC Procedures</span>
+          <span>Field Forms</span>
+          <span>PMIS Integration</span>
+          <span>AI-Assisted Development</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">What This Demonstrates</p>
+      <h2>Solutions engineering beyond software alone.</h2>
+
+      <div class="manual-skills-grid">
+        <article class="manual-skill-card">
+          <h3>Requirements Analysis</h3>
+          <p>Extracting operational obligations, acceptance criteria, and evidence requirements from dense source material.</p>
+        </article>
+
+        <article class="manual-skill-card">
+          <h3>Knowledge Architecture</h3>
+          <p>Designing a navigable hierarchy that supports field use, training, reference, and accountability.</p>
+        </article>
+
+        <article class="manual-skill-card">
+          <h3>Workflow Engineering</h3>
+          <p>Converting contractual requirements into repeatable procedures and decision gates.</p>
+        </article>
+
+        <article class="manual-skill-card">
+          <h3>Technical Publishing</h3>
+          <p>Producing a controlled professional publication with consistent structure, tables, appendices, and document controls.</p>
+        </article>
+
+        <article class="manual-skill-card">
+          <h3>Quality Systems Design</h3>
+          <p>Connecting contractor quality control, owner verification, evidence, deficiencies, readiness, and acceptance.</p>
+        </article>
+
+        <article class="manual-skill-card">
+          <h3>Field Tool Development</h3>
+          <p>Creating reports, checklists, matrices, playbooks, and forms that can support daily execution.</p>
+        </article>
+      </div>
+
+      <div class="manual-closing">
+        <p class="eyebrow">Why It Matters</p>
+        <p>
+          This artifact demonstrates solutions engineering rather than technical writing alone. The work required
+          discovering the real operational problem, designing an information hierarchy, translating dense source
+          material into user decisions, standardizing workflows, integrating field activity with a PMIS, and producing
+          a professional deliverable that can support training, accountability, readiness, and acceptance.
+        </p>
+      </div>
+    </section>
+
+    <section class="section manual-cta">
+      <p class="eyebrow">Portfolio Preview</p>
+      <h2>Review the opening framework and field appendices.</h2>
+
+      <p>
+        The portfolio preview contains the introductory architecture and the standardized forms and checklists section.
+        The complete working document remains a controlled project artifact.
+      </p>
+
+      <a
+        class="button primary"
+        href="../assets/manual/Owner_QA_Manual_Portfolio_Preview.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Open PDF preview ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Paul Thibodeau</span>
+    <span>Solutions engineering portfolio</span>
+  </footer>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>
