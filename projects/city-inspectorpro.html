@@ -2,109 +2,648 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="City InspectorPro is a full-stack municipal operations platform integrating permitting, inspections, complaints, GIS, public resources, SOPs, code references, dashboards, and AI-assisted support."
+  >
   <title>City InspectorPro | Paul Thibodeau</title>
+
   <link rel="stylesheet" href="../assets/styles.css">
+
+  <style>
+    .project-hero {
+      padding-bottom: 2rem;
+    }
+
+    .project-hero-copy {
+      max-width: 900px;
+    }
+
+    .project-hero h1 {
+      margin: 0.35rem 0 0.85rem;
+    }
+
+    .project-hero .hero-lead {
+      max-width: 820px;
+    }
+
+    .case-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .case-meta span,
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(120, 145, 175, 0.28);
+      border-radius: 999px;
+    }
+
+    .hero-screen,
+    .feature-screen {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid rgba(120, 145, 175, 0.18);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+    }
+
+    .hero-screen {
+      margin-top: 2rem;
+    }
+
+    .summary-grid,
+    .architecture-grid,
+    .skills-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .summary-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .summary-card,
+    .architecture-card,
+    .skill-card {
+      padding: 1.2rem;
+      border: 1px solid rgba(120, 145, 175, 0.2);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 1.08rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .walkthrough {
+      display: grid;
+      gap: 4.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .feature:nth-child(even) {
+      grid-template-columns: minmax(280px, 0.65fr) minmax(0, 1.35fr);
+    }
+
+    .feature:nth-child(even) .feature-media {
+      order: 2;
+    }
+
+    .feature-number {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .feature-copy h3 {
+      font-size: 1.55rem;
+      margin: 0.35rem 0 0.65rem;
+    }
+
+    .architecture-grid {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .architecture-card h3,
+    .skill-card h3 {
+      margin-top: 0;
+    }
+
+    .technology-band {
+      padding: 1.6rem;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #0d1b2a, #18324b);
+      color: #fff;
+    }
+
+    .technology-band h2 {
+      color: inherit;
+      margin-top: 0;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .tech-pill {
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 1.5rem;
+    }
+
+    .closing-panel {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-left: 4px solid currentColor;
+      border-radius: 14px;
+      background: rgba(120, 145, 175, 0.08);
+    }
+
+    .closing-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .feature,
+      .feature:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+
+      .feature:nth-child(even) .feature-media {
+        order: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .case-actions .button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .walkthrough {
+        gap: 3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="site-header">
-  <a class="brand" href="../index.html">
-    <span class="brand-mark">PT</span>
-    <span><strong>Paul Thibodeau</strong><small>Solutions Engineer</small></span>
-  </a>
-  <nav class="site-nav">
-    <a href="../index.html#work">Work</a>
-    <a href="../index.html#about">About</a>
-    <a class="nav-cta" href="../index.html#contact">Contact</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">PT</span>
+      <span>
+        <strong>Paul Thibodeau</strong>
+        <small>Solutions Engineer</small>
+      </span>
+    </a>
 
-<main>
-<section class="section case-hero">
-  <a class="back-link" href="../index.html#work">← Back to selected work</a>
-  <p class="eyebrow">CIVIC OPERATIONS PLATFORM</p>
-  <h1>City InspectorPro</h1>
-  <p class="hero-lead">A full-stack municipal operations system built to consolidate permitting, complaints, inspections, facilities, public health, mapping, codes, SOPs, and KPI reporting into one application.</p>
-  <div class="case-actions">
-    <a class="button primary" href="../assets/downloads/CityInspectorPro-source.zip" download>Download source stack ↧</a>
-  </div>
-  <div class="case-meta">
-    <span>Flask Application</span><span>Municipal Operations</span><span>Data Integration</span><span>Knowledge System</span>
-  </div>
-</section>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
 
-<section class="section case-grid">
-<aside class="case-sidebar">
-  <dl>
-    <dt>ROLE</dt><dd>Solution Architect · Domain Expert · Application Builder</dd>
-    <dt>PROBLEM</dt><dd>Municipal information and operating procedures were distributed across records, spreadsheets, documents, and departmental workflows.</dd>
-    <dt>OUTCOME</dt><dd>A unified Python application presenting operational data, maps, KPIs, inspection tools, code references, and SOP resources.</dd>
-    <dt>STACK</dt><dd>Python · Flask · SQLite · HTML · CSS · JavaScript · Plotly · CSV · Excel</dd>
-  </dl>
-</aside>
+  <main>
+    <section class="section case-hero project-hero">
+      <a class="back-link" href="../index.html#work">← Back to selected work</a>
 
-<div class="case-content">
-<section>
-  <p class="eyebrow">THE CHALLENGE</p>
-  <h2>Bring an entire municipal inspection operation into one system.</h2>
-  <p>City InspectorPro was designed around a real operational problem: inspectors and administrators often work across disconnected permit exports, complaint records, facility lists, issued documents, maps, reference codes, procedures, and reporting tools. The application reframes those materials as parts of one operating environment rather than unrelated files.</p>
-</section>
+      <div class="project-hero-copy">
+        <p class="eyebrow">Civic Operations Platform</p>
 
-<section>
-  <p class="eyebrow">THE APPLICATION</p>
-  <h2>A working full-stack architecture.</h2>
-  <ul>
-    <li>A Python Flask application with modular route and reporting components.</li>
-    <li>A persistent SQLite database for application records.</li>
-    <li>Active and completed permit-record datasets.</li>
-    <li>Complaint, issued-document, facility, and manually maintained map datasets.</li>
-    <li>Operational dashboards and KPI modules.</li>
-    <li>Municipal mapping and geocode-cache support.</li>
-    <li>Inspection forms, complaint workflows, dashboards, and code-reference views.</li>
-    <li>Embedded building, fire, and administrative SOP libraries.</li>
-    <li>Field guides and downloadable department checklists.</li>
-    <li>Local Plotly assets for interactive data visualization.</li>
-  </ul>
-</section>
+        <h1>City InspectorPro</h1>
 
-<section>
-  <p class="eyebrow">THE APPROACH</p>
-  <h2>Combine software, data, and institutional knowledge.</h2>
-  <p>The project did not treat the dashboard, map, inspection form, SOP library, and datasets as separate products. They were organized as connected layers of one municipal operations platform.</p>
-  <ul>
-    <li>Structured existing operational exports instead of waiting for perfect source systems.</li>
-    <li>Created modular KPI and mapping components.</li>
-    <li>Integrated reference documents directly into the working application.</li>
-    <li>Designed around daily decisions made by inspectors and department leadership.</li>
-    <li>Used AI-assisted development to accelerate coding, troubleshooting, and iteration.</li>
-  </ul>
-</section>
+        <p class="hero-lead">
+          A full-stack municipal operations platform designed to support inspectors, department leadership,
+          and the public through one integrated application. City InspectorPro brings permitting, complaints,
+          inspections, public health, GIS mapping, code references, SOPs, public resources, dashboards, and
+          AI-assisted support into a unified operating environment.
+        </p>
 
-<section>
-  <p class="eyebrow">WHY IT MATTERS</p>
-  <h2>This is more than a front-end prototype.</h2>
-  <p>Unlike the static Hanover demonstration, City InspectorPro contains a server-side application, persistence layer, structured datasets, reusable modules, templates, and operational reference content. It shows the ability to move from product concept into an actual application architecture.</p>
-</section>
+        <div class="case-actions">
+          <a class="button primary" href="../assets/downloads/CityInspectorPro-source.zip" download>
+            Download source stack ↧
+          </a>
+          <a class="button" href="#walkthrough">View the platform</a>
+        </div>
 
-<section>
-  <p class="eyebrow">WHAT THIS DEMONSTRATES</p>
-  <h2>Solutions engineering across the full problem.</h2>
-  <ul>
-    <li>Full-stack application design</li>
-    <li>Operational data integration</li>
-    <li>Python and Flask development</li>
-    <li>Database-backed workflows</li>
-    <li>Municipal domain expertise</li>
-    <li>Knowledge-system architecture</li>
-    <li>Dashboard and mapping design</li>
-    <li>Rapid AI-assisted product development</li>
-  </ul>
-</section>
-</div>
-</section>
-</main>
+        <div class="case-meta" aria-label="Project categories">
+          <span>Full-Stack Application</span>
+          <span>Municipal Operations</span>
+          <span>GIS &amp; Reporting</span>
+          <span>Knowledge System</span>
+          <span>AI-Assisted Support</span>
+        </div>
+      </div>
 
-<footer><span>© <span id="year"></span> Paul Thibodeau</span><span>Solutions engineering portfolio</span></footer>
-<script src="../assets/app.js"></script>
+      <img
+        class="hero-screen"
+        src="../assets/images/cityinspector-portal.png"
+        alt="City InspectorPro public operations portal"
+      >
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Project Overview</p>
+      <h2>An entire municipal inspection operation brought into one system.</h2>
+
+      <p>
+        City InspectorPro was designed around a real operational problem: municipal information and procedures
+        are often distributed across permit exports, complaint records, inspection files, facility lists,
+        issued documents, maps, code books, SOPs, and individual staff knowledge. The platform reframes those
+        materials as connected parts of one operating environment rather than unrelated files.
+      </p>
+
+      <div class="summary-grid">
+        <article class="summary-card">
+          <strong>Unified Operations</strong>
+          <span>Permits, complaints, inspections, facilities, health records, and issued documents.</span>
+        </article>
+
+        <article class="summary-card">
+          <strong>Knowledge at Work</strong>
+          <span>Codes, SOPs, guides, fees, transition planning, and departmental references.</span>
+        </article>
+
+        <article class="summary-card">
+          <strong>Operational Intelligence</strong>
+          <span>KPIs, public notices, data status, interactive maps, and compliance reporting.</span>
+        </article>
+
+        <article class="summary-card">
+          <strong>Public Access</strong>
+          <span>Permit guidance, health information, public resources, and complaint reporting.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section case-grid">
+      <aside class="case-sidebar">
+        <dl>
+          <dt>ROLE</dt>
+          <dd>Solution Architect · Domain Expert · Full-Stack Builder</dd>
+
+          <dt>PROBLEM</dt>
+          <dd>
+            Operational records, procedures, maps, public information, and reporting tools existed in separate
+            systems and formats.
+          </dd>
+
+          <dt>APPROACH</dt>
+          <dd>
+            Combine software, structured data, institutional knowledge, and public-facing services in one modular
+            municipal platform.
+          </dd>
+
+          <dt>OUTCOME</dt>
+          <dd>
+            A working Python application with persistent storage, dashboards, GIS mapping, inspection modules,
+            knowledge libraries, and AI-assisted code support.
+          </dd>
+
+          <dt>STACK</dt>
+          <dd>Python · Flask · SQLite · HTML · CSS · JavaScript · Plotly · Leaflet · CSV · Excel</dd>
+        </dl>
+      </aside>
+
+      <div class="case-content">
+        <section>
+          <p class="eyebrow">The Challenge</p>
+          <h2>Replace fragmented tools with a coherent operating environment.</h2>
+
+          <p>
+            Inspectors and administrators work across active and completed permit records, complaint files,
+            issued documents, facility lists, inspection schedules, map locations, adopted codes, departmental
+            procedures, and reporting obligations. Each source may be useful on its own, but fragmentation makes
+            the operation harder to understand and manage.
+          </p>
+
+          <p>
+            The design challenge was not simply to build another dashboard. It was to create an application
+            architecture capable of connecting operations, knowledge, public information, and decision support.
+          </p>
+        </section>
+
+        <section>
+          <p class="eyebrow">The Application</p>
+          <h2>A working full-stack architecture.</h2>
+
+          <p>
+            City InspectorPro includes a Python Flask application, modular routes and reporting components,
+            a persistent SQLite database, structured operational datasets, local visualization assets, mapping
+            support, inspection workflows, downloadable resources, and integrated code and SOP libraries.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section" id="walkthrough">
+      <p class="eyebrow">Platform Walkthrough</p>
+      <h2>The application itself demonstrates the architecture.</h2>
+
+      <div class="walkthrough">
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-portal.png"
+              alt="City InspectorPro public portal"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">01 · Public Operations Portal</span>
+            <h3>One front door for city services and operational information.</h3>
+            <p>
+              Real-time notices, permits, complaint reporting, AI-assisted code support, public resources,
+              departmental links, and process guidance are presented through one accessible interface.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-codepro.png"
+              alt="CodePro AI assistant"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">02 · CodePro AI</span>
+            <h3>AI assistance embedded directly into the municipal workflow.</h3>
+            <p>
+              CodePro provides an interface for asking questions about SOPs, building codes, permits, mechanical
+              requirements, and departmental procedures without separating the assistant from the operational system.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-dashboard-map.png"
+              alt="City InspectorPro dashboard and interactive map"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">03 · Dashboard &amp; GIS</span>
+            <h3>Operational data made visible geographically and at a glance.</h3>
+            <p>
+              Permit, complaint, inspection, and issued-document counts are combined with impact metrics and an
+              interactive municipal map to support field awareness, planning, and leadership reporting.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-food-inspections.png"
+              alt="Food establishment inspection records"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">04 · Public Health Inspections</span>
+            <h3>Compliance records designed for rapid review.</h3>
+            <p>
+              Food establishment cards communicate current status, risk, last inspection, critical and non-critical
+              findings, classification, and fee information in a searchable public-facing view.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-public-guides.png"
+              alt="Public guides and municipal fee information"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">05 · Public Education</span>
+            <h3>Help citizens prepare before they submit, build, or open.</h3>
+            <p>
+              Permit checklists, health guidance, plumbing and venting information, common violation references,
+              fee schedules, and code summaries reduce uncertainty and improve the quality of public submissions.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-code-library.png"
+              alt="Code reference and SOP library"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">06 · Code &amp; SOP Library</span>
+            <h3>Institutional knowledge converted into usable operating tools.</h3>
+            <p>
+              Building, residential, fire, electrical, mechanical, plumbing, health, OSHA, accessibility, and
+              municipal references are organized alongside SOP chapters, guides, and direct source links.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-transition-plan.png"
+              alt="Interactive 90-day transition plan"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">07 · Transition Planning</span>
+            <h3>Leadership planning integrated into the operating platform.</h3>
+            <p>
+              The 90-day transition plan turns onboarding, department audit, relationship building, quick wins,
+              standardization, communication, enforcement alignment, and staff development into an interactive roadmap.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-permit-guide.png"
+              alt="Building permit guidance"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">08 · Permit Guidance</span>
+            <h3>Code requirements translated into clear public instructions.</h3>
+            <p>
+              Permit requirements, exemptions, emergency work, ordinary repairs, contacts, and related approval
+              considerations are presented in a practical format for residents and contractors.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img
+              class="feature-screen"
+              src="../assets/images/cityinspector-sop-library.png"
+              alt="Municipal resource and SOP menu"
+            >
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">09 · Department Resource System</span>
+            <h3>Operational references remain available at the point of work.</h3>
+            <p>
+              City resources, fire department procedures, checklists, testing forms, SOPs, public guidance, and code
+              tools are organized through role-based menus instead of scattered folders and bookmarks.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Application Architecture</p>
+      <h2>Software, data, knowledge, and public service working together.</h2>
+
+      <div class="architecture-grid">
+        <article class="architecture-card">
+          <h3>Application Engine</h3>
+          <p>Python and Flask provide routing, server-side logic, templates, and modular application structure.</p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Persistence Layer</h3>
+          <p>SQLite supports application records and database-backed workflows.</p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Operational Data</h3>
+          <p>Permit, complaint, issued-document, facility, health, and mapping datasets are brought into one system.</p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>GIS &amp; Visualization</h3>
+          <p>Leaflet, Plotly, geocoding support, maps, charts, and KPI modules communicate operational activity.</p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Knowledge System</h3>
+          <p>Codes, SOPs, guides, forms, checklists, fee schedules, and transition plans are embedded in the application.</p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Public Experience</h3>
+          <p>Residents and contractors can access notices, guidance, inspections, resources, and reporting tools.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="technology-band">
+        <p class="eyebrow">Technology</p>
+        <h2>A modular full-stack municipal application.</h2>
+
+        <p>
+          The project combines a server-side application, persistent database, structured operational data,
+          interactive visualization, mapping, browser interfaces, and AI-assisted development.
+        </p>
+
+        <div class="tech-list" aria-label="Technologies used">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Flask</span>
+          <span class="tech-pill">SQLite</span>
+          <span class="tech-pill">HTML5</span>
+          <span class="tech-pill">CSS3</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">Plotly</span>
+          <span class="tech-pill">Leaflet</span>
+          <span class="tech-pill">CSV</span>
+          <span class="tech-pill">Excel</span>
+          <span class="tech-pill">AI-Assisted Development</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">What This Demonstrates</p>
+      <h2>Solutions engineering across the full problem.</h2>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Full-Stack Development</h3>
+          <p>Designing and building the application from server-side architecture through the browser interface.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Data Integration</h3>
+          <p>Structuring varied municipal datasets and making them useful within one operating environment.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Knowledge Architecture</h3>
+          <p>Turning codes, SOPs, procedures, forms, and guidance into accessible operational resources.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>GIS &amp; Reporting</h3>
+          <p>Using maps, KPIs, summaries, and visualizations to improve field and leadership awareness.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Municipal Operations</h3>
+          <p>Designing around permitting, inspections, public health, complaints, enforcement, and public service.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>AI Product Integration</h3>
+          <p>Embedding an assistant within the application instead of treating AI as a separate demonstration.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Public Experience Design</h3>
+          <p>Making complex departmental requirements easier for residents, businesses, and contractors to understand.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Rapid Product Development</h3>
+          <p>Moving from operational need to a functioning full-stack application through iterative development.</p>
+        </article>
+      </div>
+
+      <div class="closing-panel">
+        <p class="eyebrow">Why It Matters</p>
+        <p>
+          City InspectorPro demonstrates the ability to move beyond a front-end prototype into complete operational
+          software. By combining municipal domain expertise with full-stack development, the platform transforms
+          disconnected records, procedures, maps, public resources, and reporting tools into one usable system for
+          inspectors, administrators, leadership, and the public.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Paul Thibodeau</span>
+    <span>Solutions engineering portfolio</span>
+  </footer>
+
+  <script src="../assets/app.js"></script>
 </body>
 </html>
